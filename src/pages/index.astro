@@ -11,6 +11,9 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+
+const volvoHeroImg = '~/assets/images/volvo_hero2.jpeg';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -25,7 +28,12 @@ const metadata = {
 <div class="relative bg-cover bg-center h-[40vh] text-white overflow-hidden">
   <!-- Background Image -->
   <div class="absolute inset-0">
-    <img src="/src/assets/images/volvo_hero2.jpeg" alt="Volvo Hero Background" class="object-cover object-center w-full h-full" />
+    <Image 
+      src={volvoHeroImg} 
+      alt="Volvo Hero Background" 
+      width={2000} 
+      class="object-cover object-center w-full h-full" 
+    />
     <div class="absolute inset-0 bg-black opacity-30"></div>
   </div>
   
